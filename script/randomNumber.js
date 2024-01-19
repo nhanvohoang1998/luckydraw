@@ -35,7 +35,11 @@ const checkNumber = ()=>{
     return putInSlot(number)
 }
 
-console.log(checkNumber())
+export {
+    checkNumber,
+    arrayRandomNumber,
+}
+
 
 
 
