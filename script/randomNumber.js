@@ -1,9 +1,14 @@
 let arrayRandomNumber = []
+let maxNumber = 1000
 
 const randomNumber = (min, max)=>{
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
+const getMaxNumber = ()=>{
+    maxNumber = document.getElementById("modalInput").value*1
+    document.getElementById("myModal").style.display = "none";
+}
 
 const putInSlot = (number)=>{
     let firstLost = Math.floor(number / 100)
@@ -18,13 +23,13 @@ const putInSlot = (number)=>{
 }
 
 const checkNumber = ()=>{
-    let number = randomNumber(1,1000)
+    let number = randomNumber(1,maxNumber)
     let isNumber = arrayRandomNumber.find((value, index)=>{
         return value == number
     })
     // check isNumber not exist in array 
     while(isNumber != undefined){
-        number = randomNumber(1,1000)
+        number = randomNumber(1,maxNumber)
         isNumber = arrayRandomNumber.find((value, index)=>{
             return value == number
         })
@@ -34,6 +39,8 @@ const checkNumber = ()=>{
     console.log(arrayRandomNumber)
     return putInSlot(number)
 }
+
+document.getElementById("modalSubmit").addEventListener("click", getMaxNumber)
 
 export {
     checkNumber,
