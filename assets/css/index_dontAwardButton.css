@@ -1,0 +1,472 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+
+#wrapper{
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    /* position: relative; */
+    overflow: hidden;
+    /* padding-bottom: 80px; */
+    background-color: #051e39;
+    background: url(/assets/img/background-01.jpg);
+    /* background: linear-gradient(#051e39,#88233a); */
+    background-repeat: no-repeat;
+    background-position: 100%;
+    background-size: cover;
+}
+
+
+#top{
+    width: 100%;
+
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    display: inline-block;
+}
+
+#top .appName{
+    text-shadow: #030303 4px 4px 4px;
+    text-align: center;
+    font: 700 50px/1 UtmAvo,sans-serif;
+    color: #ffd212;
+    margin: 70px 0 18px;
+    text-transform: uppercase;
+
+
+}
+
+
+/* #top .awardName{
+  text-shadow: #030303 4px 4px 4px;
+  text-align: center;
+  font: 700 70px/1 UtmAvo,sans-serif;
+  color: #ffd212;
+  margin: 40px 0 18px;
+  text-transform: uppercase;
+
+
+}
+
+
+#top .topImg{
+    max-height: 200px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 100%;
+} */
+
+.imgAgribank{
+    width: 300px;
+    /* height: 300vh; */
+    position: absolute;
+        top: 50px;
+        left: 50px;
+
+}
+
+
+#mid{
+
+}
+
+/* #mid .name{
+    height: 120px;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 26px;
+    color: inherit;
+} */
+
+
+#mid .spinBoxOutSide{
+    background: rgba(174, 28, 63, 1);
+    padding: 11px;
+    border: 3px solid #f5db79;
+    border-radius: 15px;
+    display: inline-block;
+    top: -3px;
+    /* margin-top: 5%; */
+    margin-bottom: 37px;
+    max-width: 100%;    
+}
+
+#mid .spinBoxInSide{
+    padding: 0 4px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #2a254f;
+    padding: 0 7px;
+    border: 1px solid #1e1948;
+
+
+}
+
+#mid .slots{
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    background: #2a254f;
+    padding: 11px 0;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0;
+    line-height: 0;
+    margin-bottom: 0;
+    list-style: none outside none;
+
+}
+
+#mid .slot{
+    width: 230px;
+    height: 300px;
+    display: inline-block;
+    margin: 7px 11px;
+    background: rgba(174, 28, 63, 1);
+    border-radius: 5px;
+    text-align: center;
+    overflow: hidden;
+    outline: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+
+}
+
+#mid .imgSlot{
+    width: 20%;
+    height: auto;
+    text-align: center;
+    opacity: .5;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#bot{
+
+
+}
+
+
+
+
+#bot .buttonSpin{
+    background: #fbce3d url(/assets/img/btn-yellow-bg.jpg) no-repeat top;
+    background-size: cover;
+    margin: 0 8px;
+    color: #6a4c08;
+    box-shadow: inset 0 -5px #fef269;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
+    -webkit-appearance: none;
+    min-width: 288px;
+    transition: all .3s;
+    height: 62px;
+    line-height: 62px;
+    -moz-appearance: none;
+    appearance: none;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+
+
+/* modal */
+
+    input {
+        /* display: none; */
+        text-align: center;
+        font-weight: 700;
+        color: #051e39;
+    }
+
+.control-modal{
+    margin: 180px 0;            
+    }
+  
+  .btn {
+    /* background-color: #0259a0;
+    padding: 8px 24px;
+    border-radius: 3px; */
+    color: white;
+    cursor: pointer;
+
+  }
+  
+  .modal {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .65);
+
+
+
+  }
+  
+  #control-modal:checked ~ .modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fade .6s forwards;
+    opacity: 0;
+
+  }
+  
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .modal-content {
+    background-color: white;
+    width: 512px;
+    border-radius: 3px;
+    
+
+  }
+  
+  /* .modal-header {
+    padding: 12px 24px;
+    text-align: center;
+    position: relative;
+  } */
+  
+  .modal-close {
+    position: absolute;
+    background-color: gray;
+    color: white;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 50%;
+    top: -10px;
+    right: -10px;
+    cursor: pointer;
+
+  }
+  
+  .modal-body {
+    padding: 12px 24px 24px;
+
+  }
+
+.modal .submitButton {
+    background-color: #0259a0;
+    color: white;
+    height: 40px;
+    width: 100px;
+
+}
+
+.modal .submitButton:hover {
+    background-color: cornflowerblue;
+    color: #022038;
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+/* Slideshow container */
+
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  /* max-width: 1000px; */
+  position: relative;
+  margin: auto;
+  width: 100%;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+/* .dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  /* animation-duration: 1.5s; */
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 100%) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/* scroll number */
+
+.slot h3 {
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  font-size: 180px;
+  color: white;
+}
+
+.number {
+  position: relative;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  height: 270px;
+  transition: width 1.8s ease;
+}
+
+
+
+
+h3+span {
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+
+
+.number>span.visible {
+  /* position: static; */
+  width: 100%;
+  opacity: 1;
+  flex-shrink: 1;
+}
+
+
+
+.number>span {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  opacity: 0;
+  flex-shrink: 2;
+  flex-basis: 180px;
+  width: 1px;
+
+  position: absolute;
+  right: 0;
+
+  line-height: 270px;
+  transition: all 2s ease;
+}
+
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    180deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(180deg, transparent, white 20%, white 80%, transparent);
+}
+
+/* scroll animation */
+.scroller[data-animated="true"] .scroller__inner {
+  filter: blur(5px);
+  animation: scroll 1.5s linear infinite ;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateY(-100%);
+  }
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vòng Quay May Mắn</title>
+<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./assets/css/index_dontAwardButton.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  
+  <body>
+    <section id="wrapper">
+        <div id="top">
+            <div class="appName">QUAY SỐ MAY MẮN</div>
+            <!-- Slideshow container -->
+
+            <style>
+                .mySlides {display:none;}
+                </style>
+                <body>
+                
+                <h2 class="w3-center"></h2>
+                
+                <div class="w3-content w3-display-container">
+                  <img class="mySlides" src="./assets/img/kkPrize.svg" style="width:65rem" height="200rem">
+                  <img class="mySlides" src="./assets/img/bronzePrize.svg" style="width:65rem" height="200rem">
+                  <img class="mySlides" src="./assets/img/silverPrize.svg" style="width:65rem" height="200rem">
+                  <img class="mySlides" src="./assets/img/goldPrize.svg" style="width:65rem" height="200rem">
+                  <img class="mySlides" src="./assets/img/diamondPrize.svg" style="width:65rem" height="200rem">
+                
+                  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                </div>
+
+                <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+                    
+                    function plusDivs(n) {
+                      showDivs(slideIndex += n);
+                    }
+                    
+                    function showDivs(n) {
+                      var i;
+                      var x = document.getElementsByClassName("mySlides");
+                      if (n > x.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = x.length}
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      x[slideIndex-1].style.display = "block";  
+                    }
+                    </script>
+
+
+
+
+                <!-- logo Agribank -->
+            <div class="imgAgribank">
+                <img src="./assets/img/imgAgribank.svg" alt="">
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div id="mid">
+<!-- <div class="name">HO TEN</div> -->
+            <div class="spinBoxOutSide">
+                <div class="spinBoxInSide">
+                    <ul class="slots">
+                        <li class="slot">
+                            <!-- <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt=""> -->
+                            <h3>
+                                <span id="number1" class="number scroller">
+                                    <span data-value="0" class="scroller__inner visible">
+                                        <span>0</span>
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                        <span>7</span>
+                                        <span>8</span>
+                                        <span>9</span>
+                                    </span>
+                                </span>
+                            </h3>
+                        </li>
+                        <li class="slot">
+                            <!-- <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt=""> -->
+                            <h3>
+                                <span id="number1" class="number scroller">
+                                    <span data-value="0" class="scroller__inner visible">
+                                        <span>0</span>
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                        <span>7</span>
+                                        <span>8</span>
+                                        <span>9</span>
+                                    </span>
+                                </span>
+                            </h3>
+                        </li>
+                        <li class="slot">
+                            <!-- <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt=""> -->
+                            <h3>
+                                <span id="number1" class="number scroller">
+                                    <span data-value="9" class="scroller__inner visible">
+                                        <span>0</span>
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                        <span>7</span>
+                                        <span>8</span>
+                                        <span>9</span>
+                                    </span>
+                                </span>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+  
+
+
+        <div id="bot">
+            <!-- <div class="buttonAward"><a href="">Giải Khuyến Khích</a></div> -->
+            <button id="button1" class="buttonSpin">Quay số</button>
+            <button id="button2" class="buttonSpin">Stop</button>
+
+        </div>
+
+
+<!-- modal -->
+        
+        <!-- <input type="checkbox" id="control-modal" />
+        <label for="control-modal" class="btn">Chọn để nhập số lượng nhân viên</label>
+        <div class="modal">
+            <div class="modal-content">
+            <div class="modal-header">
+      
+                <label for="control-modal" class="modal-close">X</label>
+            </div>
+            <div class="modal-body">
+                <input type="text"><br><br>
+                <input type="submit" value="Đồng ý" class="submitButton">
+            </div>
+            </div>
+        </div> -->
+
+
+
+
+
+    </section>
+  
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script type="module" src="./script/randomNumber.js"></script>
+    <script type="module" src="./script/srolling.js"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
