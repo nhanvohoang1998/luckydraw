@@ -149,6 +149,7 @@ html {
   height: 100%;
   display: inline-block;
   vertical-align: middle;
+  transition: all 0.3s ease;
 }
 
 #bot {}
@@ -515,7 +516,11 @@ h3+span {
 /* scroll animation */
 .scroller[data-animated="true"] .scroller__inner {
   filter: blur(5px);
-  animation: scroll 1.5s linear infinite;
+  animation: scroll 1.5s var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="reverse"] {
+  --_animation-direction: reverse;
 }
 
 @keyframes scroll {
@@ -529,14 +534,20 @@ h3+span {
 
 #award {
   display: flex;
-  justify-content: space-around
+  justify-content: space-around;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
 }
 
 .numberAward {
   text-shadow: #030303 4px 4px 4px;
   text-align: center;
-  font: 700 50px/1 UtmAvo, sans-serif;
-  color: #ffd212;
+  font: 700 30px/1 UtmAvo, sans-serif;
+  color: white;
   margin: 70px 10px 10px;
   text-transform: uppercase;
+  border: 3px solid #f5db79;
+  border-radius: 15px;
+  padding: 10px 30px;
 }

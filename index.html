@@ -30,11 +30,11 @@
                 <h2 class="w3-center"></h2>
 
                 <div class="w3-content w3-display-container">
-                    <img class="mySlides" src="./assets/img/kkPrize.svg" style="width:65rem" height="200rem">
-                    <img class="mySlides" src="./assets/img/bronzePrize.svg" style="width:65rem" height="200rem">
-                    <img class="mySlides" src="./assets/img/silverPrize.svg" style="width:65rem" height="200rem">
-                    <img class="mySlides" src="./assets/img/goldPrize.svg" style="width:65rem" height="200rem">
-                    <img class="mySlides" src="./assets/img/diamondPrize.svg" style="width:65rem" height="200rem">
+                    <img class="mySlides" value="giaiKhuyenKhich" src="./assets/img/kkPrize.svg" style="width:65rem" height="200rem">
+                    <img class="mySlides" value="giaiBa" src="./assets/img/bronzePrize.svg" style="width:65rem" height="200rem">
+                    <img class="mySlides" value="giaiNhi" src="./assets/img/silverPrize.svg" style="width:65rem" height="200rem">
+                    <img class="mySlides" value="giaiNhat" src="./assets/img/goldPrize.svg" style="width:65rem" height="200rem">
+                    <img class="mySlides" value="giaiDacBiet" src="./assets/img/diamondPrize.svg" style="width:65rem" height="200rem">
 
                     <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                     <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -46,6 +46,7 @@
 
                     function plusDivs(n) {
                         showDivs(slideIndex += n);
+                        document.getElementById("award").innerHTML = ``
                     }
 
                     function showDivs(n) {
@@ -71,7 +72,7 @@
                 <div class="spinBoxInSide">
                     <ul class="slots">
                         <li class="slot">
-                            <!-- <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt=""> -->
+                            <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt="">
                             <h3>
                                 <span id="number1" class="number scroller">
                                     <span data-value="0" class="scroller__inner visible">
@@ -90,9 +91,9 @@
                             </h3>
                         </li>
                         <li class="slot">
-                            <!-- <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt=""> -->
+                            <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt="">
                             <h3>
-                                <span id="number2" class="number scroller">
+                                <span id="number2" class="number scroller" data-direction="reverse">
                                     <span data-value="0" class="scroller__inner visible">
                                         <span>0</span>
                                         <span>1</span>
@@ -109,7 +110,7 @@
                             </h3>
                         </li>
                         <li class="slot">
-                            <!-- <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt=""> -->
+                            <img class="imgSlot" src="./assets/img/logoAgribank.svg" alt="">
                             <h3>
                                 <span id="number3" class="number scroller">
                                     <span data-value="9" class="scroller__inner visible">
@@ -205,6 +206,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    
+    <script type="module" src="./data/employee.js"></script>
     <script type="module" src="./script/randomNumber.js"></script>
     <script type="module" src="./script/srolling.js"></script>
 
