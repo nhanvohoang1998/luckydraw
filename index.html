@@ -36,17 +36,16 @@
                     <img class="mySlides" value="giaiNhat" src="./assets/img/goldPrize.svg" style="width:65rem" height="200rem">
                     <img class="mySlides" value="giaiDacBiet" src="./assets/img/diamondPrize.svg" style="width:65rem" height="200rem">
 
-                    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-                    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+                    <button id="buttonPre" class="w3-button w3-black w3-display-left">&#10094;</button>
+                    <button id="buttonNext" class="w3-button w3-black w3-display-right">&#10095;</button>
                 </div>
 
-                <script>
+                <!-- <script>
                     var slideIndex = 1;
                     showDivs(slideIndex);
 
                     function plusDivs(n) {
                         showDivs(slideIndex += n);
-                        // document.getElementById("award").innerHTML = ``
                     }
 
                     function showDivs(n) {
@@ -59,7 +58,7 @@
                         }
                         x[slideIndex - 1].style.display = "block";
                     }
-                </script>
+                </script> -->
                 <!-- logo Agribank -->
                 <div class="imgAgribank">
                     <img src="./assets/img/imgAgribank.svg" alt="">
@@ -210,6 +209,7 @@
     <script type="module" src="./data/employee.js"></script>
     <script type="module" src="./script/randomNumber.js"></script>
     <script type="module" src="./script/srolling.js"></script>
+    <script type="module" src="./script/slider.js"></script>
 
 
 

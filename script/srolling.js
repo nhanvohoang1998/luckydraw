@@ -17,7 +17,7 @@ const scrollToNumber = (number, slot) => {
 
 // scrolling button with add animation attribute
 const scrolling = () => {
-    resetY.forEach((value)=>{
+    resetY.forEach((value) => {
         value.style.transform = `translateY(0%)`
     })
 
@@ -46,28 +46,28 @@ const stopScrolling = () => {
         // add data-animated="true" to every `.scroller` on the page
         scroller.setAttribute("data-animated", false);
     })
-    
+
     let { firstLost, secondLost, thirdLost } = checkNumber()
     // translate y to -90 to sroll up number2 slot
     scrollToNumber(9, number2)
     //fix bug at scroll number 0 and 9
-    if(firstLost == 0){
+    if (firstLost == 0) {
         number1.style.transform = `translateY(2%)`
     }
-    if(secondLost == 9){
+    if (secondLost == 9) {
         number2.style.transform = `translateY(-92%)`
     }
-    if(thirdLost == 0){
+    if (thirdLost == 0) {
         number3.style.transform = `translateY(2%)`
     }
 
-    setTimeout(()=>{
+    setTimeout(() => {
         scrollToNumber(firstLost, number1)
         scrollToNumber(secondLost, number2)
         scrollToNumber(thirdLost, number3)
-        setTimeout(()=>{
+        setTimeout(() => {
             award()
-        },2000)
+        }, 2000)
     }, 1)
 }
 
@@ -82,20 +82,20 @@ const getNameFromData = (number) => {
 const award = () => {
     try {
         let awardElement = ``
-    // get array award to maping
-    returnArrayAward(selectAwardName()).map((value, index) => {
-        let { name } = getNameFromData(value)
-        let tmp = `
+        // get array award to maping
+        returnArrayAward(selectAwardName()).map((value, index) => {
+            let { name } = getNameFromData(value)
+            let tmp = `
                     <div class="numberAward">
                         <div>${value}</div>
                         <div>${name}</div>
                     </div>
                 `
-        awardElement += tmp
-    })
-    document.getElementById("award").innerHTML = awardElement
+            awardElement += tmp
+        })
+        document.getElementById("award").innerHTML = awardElement
     } catch (error) {
-        
+
     }
 }
 
@@ -114,3 +114,8 @@ const refreshAward = () => {
 // document.getElementById("Reset").addEventListener("click", refreshAward)
 document.getElementById("Spin").addEventListener("click", scrolling)
 document.getElementById("Stop").addEventListener("click", stopScrolling)
+
+
+export {
+    award,
+}
