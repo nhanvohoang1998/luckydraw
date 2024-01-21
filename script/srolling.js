@@ -10,7 +10,7 @@ const resetY = document.querySelectorAll(".scroller .scroller__inner")
 
 //scroll number with stranslate y
 const scrollToNumber = (number, slot) => {
-    slot.querySelectorAll('span').forEach((tick, i) => {
+    slot.querySelectorAll('span').forEach(() => {
         slot.style.transform = `translateY(-${10 * parseInt(number)}%)`;
     })
 }
@@ -46,13 +46,29 @@ const stopScrolling = () => {
         // add data-animated="true" to every `.scroller` on the page
         scroller.setAttribute("data-animated", false);
     })
-
+    
     let { firstLost, secondLost, thirdLost } = checkNumber()
-    scrollToNumber(firstLost, number1)
-    scrollToNumber(secondLost, number2)
-    scrollToNumber(thirdLost, number3)
+    // translate y to -90 to sroll up number2 slot
+    scrollToNumber(9, number2)
+    //fix bug at scroll number 0 and 9
+    if(firstLost == 0){
+        number1.style.transform = `translateY(2%)`
+    }
+    if(secondLost == 9){
+        number2.style.transform = `translateY(-92%)`
+    }
+    if(thirdLost == 0){
+        number3.style.transform = `translateY(2%)`
+    }
 
-    award()
+    setTimeout(()=>{
+        scrollToNumber(firstLost, number1)
+        scrollToNumber(secondLost, number2)
+        scrollToNumber(thirdLost, number3)
+        setTimeout(()=>{
+            award()
+        },2000)
+    }, 1)
 }
 
 //get name value from data employee
@@ -64,7 +80,8 @@ const getNameFromData = (number) => {
 
 // show randomnumber bottom at website
 const award = () => {
-    let awardElement = ``
+    try {
+        let awardElement = ``
     // get array award to maping
     returnArrayAward(selectAwardName()).map((value, index) => {
         let { name } = getNameFromData(value)
@@ -77,6 +94,9 @@ const award = () => {
         awardElement += tmp
     })
     document.getElementById("award").innerHTML = awardElement
+    } catch (error) {
+        
+    }
 }
 
 // refresh new award:
@@ -91,32 +111,6 @@ const refreshAward = () => {
 
 }
 
-document.getElementById("Reset").addEventListener("click", refreshAward)
+// document.getElementById("Reset").addEventListener("click", refreshAward)
 document.getElementById("Spin").addEventListener("click", scrolling)
 document.getElementById("Stop").addEventListener("click", stopScrolling)
-
-
-// // If a user hasn't opted in for recuded motion, then we add the animation
-// if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-//   addAnimation();
-// }
-
-// function addAnimation() {
-//   scrollers.forEach((scroller) => {
-//     // add data-animated="true" to every `.scroller` on the page
-//     scroller.setAttribute("data-animated", true);
-
-//     // Make an array from the elements within `.scroller-inner`
-//     const scrollerInner = scroller.querySelector(".scroller__inner");
-//     const scrollerContent = Array.from(scrollerInner.children);
-
-//     // For each item in the array, clone it
-//     // add aria-hidden to it
-//     // add it into the `.scroller-inner`
-//     scrollerContent.forEach((item) => {
-//       const duplicatedItem = item.cloneNode(true);
-//       duplicatedItem.setAttribute("aria-hidden", true);
-//       scrollerInner.appendChild(duplicatedItem);
-//     });
-//   });
-// }

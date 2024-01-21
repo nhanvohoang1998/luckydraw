@@ -103,13 +103,6 @@ const checkNumber = () => {
     // push number into array
     arrayRandomNumber.push(number)
     putInArrayAward(selectAwardName(),number)
-
-    console.log(arrayRandomNumber)
-    console.log(arrayGiaiKhuyenKhich)
-    console.log(arrayGiaiBa)
-    console.log(arrayGiaiNhi)
-    console.log(arrayGiaiNhat)
-    console.log(arrayGiaiDacBiet)
     return putInSlot(number)
 }
 
