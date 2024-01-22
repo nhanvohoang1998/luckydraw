@@ -118,4 +118,6 @@ document.getElementById("Stop").addEventListener("click", stopScrolling)
 
 export {
     award,
+    imgSlots,
+    
 }

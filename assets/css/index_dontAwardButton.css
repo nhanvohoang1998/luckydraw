@@ -34,6 +34,10 @@ html {
   display: inline-block;
 }
 
+.mySlides{
+  transition: all 0.3 ease;
+}
+
 #top .appName {
   text-shadow: #030303 4px 4px 4px;
   text-align: center;
@@ -74,9 +78,6 @@ html {
   left: 50px;
 
 }
-
-
-#mid {}
 
 /* #mid .name{
     height: 120px;
@@ -151,8 +152,6 @@ html {
   vertical-align: middle;
   transition: all 0.3s ease;
 }
-
-#bot {}
 
 
 #bot .buttonReset {
@@ -503,7 +502,7 @@ h3+span {
 }
 
 
-.scroller[data-animated="true"] {
+.scroller{
   overflow: hidden;
   -webkit-mask: linear-gradient(180deg,
       transparent,
@@ -511,22 +510,6 @@ h3+span {
       white 80%,
       transparent);
   mask: linear-gradient(180deg, transparent, white 20%, white 80%, transparent);
-}
-
-/* scroll animation */
-.scroller[data-animated="true"] .scroller__inner {
-  filter: blur(5px);
-  animation: scroll 1.5s var(--_animation-direction, forwards) linear infinite;
-}
-
-.scroller[data-direction="reverse"] {
-  --_animation-direction: reverse;
-}
-
-@keyframes scroll {
-  to {
-    transform: translateY(-100%);
-  }
 }
 
 
@@ -550,4 +533,109 @@ h3+span {
   border: 3px solid #f5db79;
   border-radius: 15px;
   padding: 10px 30px;
+}
+
+
+/* animation */
+/* scroll animation */
+.scroller[data-animated="true"] .scroller__inner {
+  filter: blur(5px);
+  animation: scroll 1.5s var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="reverse"] {
+  --_animation-direction: reverse;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+
+/* animation spin box */
+/* 
+.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+} */
+
+.prize-prev {
+  animation-name: bounceInLeft;
+  animation-duration: 2s;
+}
+
+.prize-next {
+  animation-name: bounceInRight;
+  animation-duration: 2s;
+}
+
+/* @keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+} */
+
+@keyframes bounceInLeft {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    transform: translate3d(-3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(-10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
+}
+
+@keyframes bounceInRight {
+  from, 60%, 75%, 90%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  from {
+    opacity: 0;
+    transform: translate3d(3000px, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    transform: translate3d(-25px, 0, 0);
+  }
+  75% {
+    transform: translate3d(10px, 0, 0);
+  }
+  90% {
+    transform: translate3d(-5px, 0, 0);
+  }
+  to {
+    transform: none;
+  }
 }
