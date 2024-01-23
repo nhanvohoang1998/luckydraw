@@ -44,10 +44,14 @@ function plusDivs(n) {
     showDivs(slideIndex += n);
     let spinBoxOutSideElement = document.getElementById("spinBoxOutSide")
     let mySlidesElement = document.querySelectorAll(".mySlides")
+    let slotsElement = document.querySelectorAll(".slot")
 
     spinBoxOutSideElement.style.opacity = "0"
     mySlidesElement.forEach((mySlide)=>{
         mySlide.style.opacity = "0"
+    })
+    slotsElement.forEach((slot)=>{
+        slot.classList.remove("animate__flipInY")
     })
     removeAnimationSpinSlide()
     spinBoxOutSideElement.style.opacity = "1"
@@ -56,6 +60,9 @@ function plusDivs(n) {
     setTimeout(() => {
         mySlidesElement.forEach((mySlide)=>{
             mySlide.style.opacity = "1"
+        })
+        slotsElement.forEach((slot)=>{
+            slot.classList.add("animate__flipInY")
         })
         imgSlots.forEach((imgSlot) => {
             imgSlot.style.display = "inline-block"

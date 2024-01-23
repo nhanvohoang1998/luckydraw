@@ -37,38 +37,81 @@ const scrolling = () => {
 // + scroll to random number every single slot
 // + show randomnumber bottom at website
 const stopScrolling = () => {
-    let isStop = document.querySelector("#number1").getAttribute("data-animated")
+    let isStop = document.querySelector("#number3").getAttribute("data-animated")
     if (isStop == "false") {
         return
     }
 
-    scrollers.forEach((scroller) => {
-        // add data-animated="true" to every `.scroller` on the page
-        scroller.setAttribute("data-animated", false);
-    })
-
+    //random number
     let { firstLost, secondLost, thirdLost } = checkNumber()
-    // translate y to -90 to sroll up number2 slot
-    scrollToNumber(9, number2)
-    //fix bug at scroll number 0 and 9
-    if (firstLost == 0) {
-        number1.style.transform = `translateY(2%)`
-    }
-    if (secondLost == 9) {
-        number2.style.transform = `translateY(-92%)`
-    }
-    if (thirdLost == 0) {
-        number3.style.transform = `translateY(2%)`
-    }
+    let isGiaiDacBiet = selectAwardName()
+    if (isGiaiDacBiet == "giaiDacBiet") {
+        scrollers.forEach((scroller) => {
+            if (scroller.id == "number3") {
+                return
+            }
+            // add data-animated="true" to every `.scroller` on the page
+            scroller.setAttribute("data-animated", false)
+        })
+        // translate y to -90 to sroll up number2 slot
+        scrollToNumber(9, number2)
+        //fix bug at scroll number 0 and 9
+        if (firstLost == 0) {
+            number1.style.transform = `translateY(2%)`
+        }
+        if (secondLost == 9) {
+            number2.style.transform = `translateY(-92%)`
+        }
+        if (thirdLost == 0) {
+            number3.style.transform = `translateY(2%)`
+        }
 
-    setTimeout(() => {
-        scrollToNumber(firstLost, number1)
-        scrollToNumber(secondLost, number2)
-        scrollToNumber(thirdLost, number3)
         setTimeout(() => {
-            award()
-        }, 2000)
-    }, 1)
+            scrollToNumber(firstLost, number1)
+            scrollToNumber(secondLost, number2)
+            document.getElementById("Stop").style.display = "none"
+            document.getElementById("Final").style.display = "inline-block"
+            document.getElementById("Final").addEventListener("click", () => {
+                document.getElementById("number3").setAttribute("data-animated", false)
+                setTimeout(() => {
+                    scrollToNumber(thirdLost, number3)
+                    setTimeout(() => {
+                        award()
+                        document.getElementById("Stop").style.display = "inline-block"
+                        document.getElementById("Final").style.display = "none"
+                    }, 8000)
+                }, 1)
+            })
+        }, 1)
+
+    } else {
+        scrollers.forEach((scroller) => {
+            // add data-animated="true" to every `.scroller` on the page
+            scroller.setAttribute("data-animated", false);
+        })
+
+        // translate y to -90 to sroll up number2 slot
+        scrollToNumber(9, number2)
+        //fix bug at scroll number 0 and 9
+        if (firstLost == 0) {
+            number1.style.transform = `translateY(2%)`
+        }
+        if (secondLost == 9) {
+            number2.style.transform = `translateY(-92%)`
+        }
+        if (thirdLost == 0) {
+            number3.style.transform = `translateY(2%)`
+        }
+
+        setTimeout(() => {
+            scrollToNumber(firstLost, number1)
+            scrollToNumber(secondLost, number2)
+            scrollToNumber(thirdLost, number3)
+            setTimeout(() => {
+                award()
+            }, 8000)
+        }, 1)
+    }
 }
 
 //get name value from data employee
@@ -119,5 +162,5 @@ document.getElementById("Stop").addEventListener("click", stopScrolling)
 export {
     award,
     imgSlots,
-    
+
 }
