@@ -5,7 +5,7 @@ let arrayGiaiNhi = []
 let arrayGiaiNhat = []
 let arrayGiaiDacBiet = []
 
-let maxNumber = 1000
+let maxNumber = 300
 
 //random number
 const randomNumber = (min, max) => {

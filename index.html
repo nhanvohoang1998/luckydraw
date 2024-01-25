@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <link rel='shortcut icon' href='./assets/ico/title.ico' />
     <title>Vòng Quay May Mắn</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -30,14 +31,14 @@
                 <h2 class="w3-center"></h2>
 
                 <div class="w3-content w3-display-container">
-                    <img class="mySlides" value="giaiKhuyenKhich" src="./assets/img/kkPrize.svg" style="width:65rem" height="200rem">
+                    <img class="mySlides" value="giaiKhuyenKhich" src="./assets/img/consolationPrize.svg" style="width:65rem" height="200rem">
                     <img class="mySlides" value="giaiBa" src="./assets/img/bronzePrize.svg" style="width:65rem" height="200rem">
                     <img class="mySlides" value="giaiNhi" src="./assets/img/silverPrize.svg" style="width:65rem" height="200rem">
                     <img class="mySlides" value="giaiNhat" src="./assets/img/goldPrize.svg" style="width:65rem" height="200rem">
                     <img class="mySlides" value="giaiDacBiet" src="./assets/img/diamondPrize.svg" style="width:65rem" height="200rem">
 
-                    <button id="buttonPre" class="w3-button w3-black w3-display-left">&#10094;</button>
-                    <button id="buttonNext" class="w3-button w3-black w3-display-right">&#10095;</button>
+                    <button id="buttonPre" class="w3-button w3-black w3-display-left" accesskey="," title="Alt + ,">&#10094;</button>
+                    <button id="buttonNext" class="w3-button w3-black w3-display-right" accesskey="." title="Alt + .">&#10095;</button>
                 </div>
 
                 <!-- logo Agribank -->
@@ -116,9 +117,9 @@
         <div id="bot">
             <!-- <div class="buttonAward"><a href="">Giải Khuyến Khích</a></div> -->
             <button id="Reset" class="buttonReset botButton">Giải Mới</button>
-            <button id="Spin" class="buttonSpin botButton">Quay Số</button>
-            <button id="Stop" class="buttonStop botButton">Dừng</button>
-            <button id="Final" class="buttonStop botButton">Chốt</button>
+            <button id="Spin" class="buttonSpin botButton" accesskey="p" title="Alt + p">Quay Số</button>
+            <button id="Stop" class="buttonStop botButton" accesskey="s" title="Alt + s">Dừng</button>
+            <button id="Final" class="buttonStop botButton" accesskey="c">Chốt</button>
         </div>
 
         <!-- modal -->
@@ -126,7 +127,7 @@
         <button id="myBtn" class="botButton" style="    background-color: transparent;
                             color: #fff;
                             border: none;
-                            margin-top: 10px;">
+                            margin-top: 10px;" accesskey="q" title="Alt + q">
             Chọn để nhập số lượng nhân viên</button>
 
         <!-- The Modal -->
@@ -134,9 +135,9 @@
 
             <!-- Modal content -->
             <div class="modal-content">
-                <span class="close">&times;</span>
-                <input id="modalInput" type="text" class="modalInput"><br>
-                <button id="modalSubmit" class="modalSubmit">Đồng ý</button>
+                <span class="close" accesskey="x" title="Alt + x">&times;</span>
+                <input id="modalInput" type="text" class="modalInput" title="Nhập hơn số lượng nhân viên một số. Ví dụ số lượng nhân viên là 272 hãy nhập 273"><br>
+                <button id="modalSubmit" class="modalSubmit" accesskey="y" title="Alt + y">Đồng ý</button>
             </div>
 
         </div>
@@ -188,6 +189,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
     <script type="module" src="./data/employee.js"></script>
     <script type="module" src="./script/randomNumber.js"></script>
     <script type="module" src="./script/srolling.js"></script>

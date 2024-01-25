@@ -71,11 +71,11 @@ html {
 } */
 
 .imgAgribank {
-  width: 300px;
+  width: 350px;
   /* height: 300vh; */
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 5px;
+  left: 10px;
 
 }
 
@@ -97,7 +97,7 @@ html {
   display: inline-block;
   top: -3px;
   /* margin-top: 5%; */
-  margin-bottom: 37px;
+  margin-bottom: 20px;
   max-width: 100%;
 }
 
@@ -143,7 +143,7 @@ html {
 }
 
 #mid .imgSlot {
-  width: 20%;
+  width: 35%;
   height: auto;
   text-align: center;
   opacity: .5;
@@ -175,6 +175,7 @@ html {
   height: 50px;
   line-height: 50px;
   appearance: none;
+  display: none;
 }
 
 #bot .buttonSpin {
@@ -193,10 +194,10 @@ html {
   border-radius: 5px;
   border: 0;
   -webkit-appearance: none;
-  min-width: 250px;
+  min-width: 180px;
   transition: all .3s;
-  height: 62px;
-  line-height: 62px;
+  height: 50px;
+  line-height: 50px;
   appearance: none;
 }
 
@@ -404,23 +405,25 @@ img {
 
 .modalInput {
   position: absolute;
-  top: 30px;
+  top: 27px;
   text-align: center;
   font-weight: 700;
   color: #051e39;
   border-radius: 10px;
-  height: 30px;
+  height: 35px;
+  width: 20vh;
   background-color: rgb(152, 183, 240);
+  font-size: 25px;
 }
 
 .modalSubmit {
   background-color: #0259a0;
   color: white;
   height: 40px;
-  width: 100px;
+  width: 5vw;
   align-items: center;
   position: absolute;
-  top: 75px;
+  top: 80px;
   border-radius: 10px;
   border: none;
 }
@@ -524,19 +527,19 @@ h3+span {
   justify-content: space-around;
   -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 .numberAward {
   text-shadow: #030303 4px 4px 4px;
   text-align: center;
-  font: 700 30px/1 UtmAvo, sans-serif;
+  font: 700 25px/1 UtmAvo, sans-serif;
   color: white;
-  margin: 70px 10px 10px;
+  margin: 3px;
   text-transform: uppercase;
-  border: 3px solid #f5db79;
-  border-radius: 15px;
-  padding: 10px 30px;
+  border: 2px solid #f5db79;
+  border-radius: 10px;
+  padding: 3px;
 }
 
 
@@ -704,4 +707,210 @@ h3+span {
       -webkit-transform: perspective(400px);
       transform: perspective(400px)
   }
+}
+
+/* reponsive  */
+/* @media screen and (max-width: 992px) {} */
+
+
+@media screen and (max-width: 992px) {
+  #wrapper {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    /* position: relative; */
+    overflow: hidden;
+    /* padding-bottom: 80px; */
+    background-color: #051e39;
+    background: url(/assets/img/background-01.jpg);
+    /* background: linear-gradient(#051e39,#88233a); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+  .imgAgribank {
+    width: 160px;
+    /* height: 300vh; */
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
+  #top .appName {
+    text-shadow: #030303 4px 4px 4px;
+    text-align: center;
+    font: 700 30px/1 UtmAvo, sans-serif;
+    color: #ffd212;
+    margin: 60px 0 8px;
+    text-transform: uppercase;
+}
+.w3-content {
+  max-width: 576px;
+}
+.mySlides {
+  width: 80% !important;
+  margin: auto;
+}
+  #mid .slot {
+    width: 150px;
+    height: 220px;
+    display: inline-block;
+    margin: 2px 5px;
+    background: rgba(174, 28, 63, 1);
+    border-radius: 2px;
+    text-align: center;
+    overflow: hidden;
+    outline: 0;
+    box-sizing: border-box;
+    white-space: nowrap;
+  }
+  .number>span {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    opacity: 0;
+    flex-shrink: 2;
+    flex-basis: 180px;
+    width: 1px;
+    position: absolute;
+    right: 0;
+    line-height: 190px;
+    transition: all 2s ease;
+  }
+  .slot h3 {
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    font-size: 150px;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  #wrapper {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    /* position: relative; */
+    overflow: hidden;
+    /* padding-bottom: 80px; */
+    background-color: #051e39;
+    background: url(/assets/img/background-01.jpg);
+    /* background: linear-gradient(#051e39,#88233a); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+  .imgAgribank {
+    width: 110px;
+    /* height: 300vh; */
+    position: absolute;
+    top: 5px;
+    left: 10px;
+  }
+
+  #top .appName {
+    text-shadow: #030303 4px 4px 4px;
+    text-align: center;
+    font: 700 25px/1 UtmAvo, sans-serif;
+    color: #ffd212;
+    margin: 55px 0 3px;
+    text-transform: uppercase;
+}
+.w3-content {
+  max-width: 576px;
+}
+.mySlides {
+  width: 100% !important;
+}
+#mid .slot {
+  width: 130px;
+  height: 200px;
+  display: inline-block;
+  margin: 2px 5px;
+  background: rgba(174, 28, 63, 1);
+  border-radius: 2px;
+  text-align: center;
+  overflow: hidden;
+  outline: 0;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+.number>span {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  opacity: 0;
+  flex-shrink: 2;
+  flex-basis: 180px;
+  width: 1px;
+  position: absolute;
+  right: 0;
+  line-height: 170px;
+  transition: all 2s ease;
+}
+.slot h3 {
+  margin: 0;
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  font-size: 130px;
+  color: white;
+}
+#bot .buttonSpin {
+  background: #fbce3d url(/assets/img/btn-yellow-bg.jpg) no-repeat top;
+  background-size: cover;
+  margin: 0 8px;
+  color: #6a4c08;
+  box-shadow: inset 0 -5px #fef269;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 0;
+  -webkit-appearance: none;
+  min-width: 180px;
+  transition: all .3s;
+  height: 50px;
+  line-height: 50px;
+  appearance: none;
+}
+#bot .buttonStop {
+  background: #fbce3d url(/assets/img/btn-yellow-bg.jpg) no-repeat top;
+  background-size: cover;
+  margin: 0 8px;
+  color: #6a4c08;
+  box-shadow: inset 0 -5px #fef269;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 0;
+  -webkit-appearance: none;
+  min-width: 180px;
+  transition: all .3s;
+  height: 50px;
+  line-height: 50px;
+  appearance: none;
+}
+.numberAward {
+  text-shadow: #030303 4px 4px 4px;
+  text-align: center;
+  font: 700 10px/1 UtmAvo, sans-serif;
+  color: white;
+  margin: 3px;
+  text-transform: uppercase;
+  border: 2px solid #f5db79;
+  border-radius: 10px;
+  padding: 3px;
+}
 }

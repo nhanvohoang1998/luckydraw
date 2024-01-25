@@ -17,6 +17,10 @@ const scrollToNumber = (number, slot) => {
 
 // scrolling button with add animation attribute
 const scrolling = () => {
+    let isStop = document.querySelector("#Final[style*='display: inline-block']")
+    if (isStop != null) {
+        return
+    }
     resetY.forEach((value) => {
         value.style.transform = `translateY(0%)`
     })
@@ -75,6 +79,9 @@ const stopScrolling = () => {
                 document.getElementById("number3").setAttribute("data-animated", false)
                 setTimeout(() => {
                     scrollToNumber(thirdLost, number3)
+                    confetti()
+                    confetti()
+                    confetti()
                     setTimeout(() => {
                         award()
                         document.getElementById("Stop").style.display = "inline-block"
