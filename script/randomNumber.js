@@ -5,7 +5,7 @@ let arrayGiaiNhi = []
 let arrayGiaiNhat = []
 let arrayGiaiDacBiet = []
 
-let maxNumber = 300
+let maxNumber = 273
 
 //random number
 const randomNumber = (min, max) => {
@@ -14,7 +14,7 @@ const randomNumber = (min, max) => {
 
 //get valua max number from input model
 const getMaxNumber = () => {
-    maxNumber = document.getElementById("modalInput").value * 1
+    maxNumber = document.getElementById("modalInput").value * 1 + 1
     document.getElementById("myModal").style.display = "none";
 }
 
